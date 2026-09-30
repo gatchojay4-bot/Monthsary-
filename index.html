@@ -1,1 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy 10th Monthsary ❤️</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Segoe UI',sans-serif;
+    background:linear-gradient(135deg,#ffd6e7,#fff0f5,#ffe4ec);
+    min-height:100vh;
+    overflow-x:hidden;
+}
+
+.hearts{
+    position:fixed;
+    width:100%;
+    height:100%;
+    pointer-events:none;
+    z-index:1;
+}
+
+.heart{
+    position:absolute;
+    color:#ff69b4;
+    animation:fall linear infinite;
+}
+
+@keyframes fall{
+    from{
+        transform:translateY(-100px);
+    }
+    to{
+        transform:translateY(110vh);
+    }
+}
+
+.container{
+    position:relative;
+    z-index:2;
+    max-width:900px;
+    margin:auto;
+    padding:30px;
+}
+
+.title{
+    text-align:center;
+    color:#ff4d88;
+    font-size:3rem;
+    margin-top:20px;
+    animation:glow 2s infinite alternate;
+}
+
+@keyframes glow{
+    from{
+        text-shadow:0 0 10px #ff9fc0;
+    }
+    to{
+        text-shadow:0 0 30px #ff4d88;
+    }
+}
+
+.card{
+    background:rgba(255,255,255,.85);
+    padding:30px;
+    border-radius:25px;
+    margin-top:30px;
+    box-shadow:0 10px 30px rgba(255,105,180,.25);
+    backdrop-filter:blur(10px);
+}
+
+p{
+    margin-bottom:18px;
+    line-height:1.8;
+    color:#5a4a56;
+}
+
+.footer{
+    text-align:center;
+    margin-top:30px;
+    font-size:1.4rem;
+    color:#ff4d88;
+}
+
+.btn{
+    display:block;
+    margin:25px auto;
+    background:#ff69b4;
+    color:white;
+    border:none;
+    padding:14px 28px;
+    border-radius:40px;
+    font-size:16px;
+}
+
+#letter{
+    white-space:pre-wrap;
+}
+</style>
+</head>
+
+<body>
+
+<div class="hearts" id="hearts"></div>
+
+<div class="container">
+    <h1 class="title">❤️ Happy 10th Monthsary Baby ❤️</h1>
+
+    <div class="card">
+        <div id="letter"></div>
+    </div>
+
+    <div class="footer">
+        ✨ I Love You So Much, Baby. Always. 🤍 ✨
+    </div>
+</div>
+
+<script>
+
+for(let i=0;i<50;i++){
+    let heart=document.createElement('div');
+    heart.classList.add('heart');
+    heart.innerHTML='❤️';
+    heart.style.left=Math.random()*100+'vw';
+    heart.style.fontSize=(15+Math.random()*25)+'px';
+    heart.style.animationDuration=(5+Math.random()*10)+'s';
+    heart.style.animationDelay=Math.random()*5+'s';
+    document.getElementById('hearts').appendChild(heart);
+}
+
+const message = `Happy 10th Monthsary, Baby. ❤️
+
+Today is our 10th monthsary, and before anything else, I just want to thank you and tell you what's really in my heart.
+
+First of all, I'm truly sorry for all the mistakes I've made, especially for cheating on you. I know I hurt you in ways that words can't fix, and I know there were times when I became the reason for your tears, doubts, and pain. Wala akong excuse sa mga nagawa ko. I take full accountability for everything, and hanggang ngayon pinagsisisihan ko pa rin ang mga pagkakamaling naging dahilan para masaktan ka.
+
+That's why I'm so grateful to you, Baby. Kahit ang dami kong naging mali, kahit ilang beses kitang binigo, you still chose to stay. You still gave me another chance when I honestly didn't deserve it.
+
+Thank you for staying by my side through my lowest moments. Thank you for believing in me even when I gave you reasons not to.
+
+Thank you rin sa lahat ng support mo. Sa mga araw na pagod ako, stressed, frustrated, o nawawalan ng gana, you're always there to encourage me.
+
+And Baby, gusto ko ring sabihin na kapag ikaw naman ang may problema, may mabigat na iniisip, o may pinagdadaanan, please don't hesitate to come to me.
+
+I know trust isn't rebuilt overnight. Hindi sapat ang sorry at hindi rin sapat ang mga pangako lang. That's why I want to prove everything through my actions.
+
+Baby, I can't change the past, but I can promise to do better in the present and future.
+
+Thank you for every effort, every sacrifice, every understanding, every reassurance, and every time you chose to stay beside me.
+
+Happy 10th Monthsary, Baby.
+
+No matter how difficult things became, you never gave up on us, and that's something I'll always be thankful for.
+
+I love you more than words can explain, and I'll spend every day proving that your second chance is not something I'll ever take for granted.
+
+I love you so much, Baby. Always. 🤍`;
+
+let i = 0;
+function typeWriter(){
+    if(i < message.length){
+        document.getElementById("letter").innerHTML += message.charAt(i);
+        i++;
+        setTimeout(typeWriter, 35);
+    }
+}
+typeWriter();
+
+</script>
+
+</body>
+</html>
 
